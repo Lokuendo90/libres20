@@ -1,0 +1,22 @@
+{
+  "baseVersion": "Gravity PRO 0.5.0-beta.1",
+  "description": "Elementos aprobados de la portada y diseño original: no modificar sin revisar visualmente y actualizar referencia con autorización.",
+  "files": {
+    "app/index.html": "52f39f54c1741f3353dbfa6e57efea3178935a35b508b3d2f8ead5ff4fd6378d",
+    "app/style.css": "0003c7fda06362afb437d753050101f284439697f4de4f3f35111e9819432432",
+    "app/motion.js": "1afa1086eabb5df9924ce13a05284f223235240b34abf9cdab8dd3bd8e5f7e71",
+    "app/assets/amazon-a.svg": "0f071721efc72e89336e2526130a67a47cf96877949950b0445bf3b53fbc6958",
+    "app/assets/clouds.jpg": "0435d6fa80afcadf6f0b9e8fa6e2ab0423bf0edd7c9d1ab78a5e91d336baea1c",
+    "app/assets/facebook.svg": "49c6d4a4cb44befc91b8c111e24b2b6f27dd159b1bc4c27f3470b457c89db3d1",
+    "app/assets/gmail.svg": "99962bdffe464cdc80c666bf9a4320a14fcc993c7eff5c4b07be513947f84121",
+    "app/assets/google.svg": "c09bb5049099cc1c10dca9abb93c7f47ba039dfeebe9047d3ea334a9896c0141",
+    "app/assets/gravity.png": "a7602cec87b680a82a828c30a1c47285626be4616b237be90a114b7c0b979d26",
+    "app/assets/gravity.svg": "3cf5c1c6ee1ca1ede2b5e13fdaa9c82fe82910fcff304bfefc08190de3425a20",
+    "app/assets/instagram.svg": "bebb6b7c5b1bc8d9ed9da288e44ccff36028efca320ebb79b0545d3b42b62a71",
+    "app/assets/landscape.jpg": "17dee73b25c9b72ca9b20a5e6874e0ee5958ea2b1cf87f459bdc023eafc079b8",
+    "app/assets/lava-mask.png": "2fced53b26a15889b05d0e08eaf8f19af7a2523b19636142ef297f8b76f08256",
+    "app/assets/moon.jpg": "59f434a90a8e8dbbeb9d0a657e91af0d9a228d1af5e0fb33f91399a100e100f8",
+    "app/assets/netflix.svg": "3dd766e645b568bdf1115795412c6566767696b269820192ebecc8b3c85c78ee",
+    "app/assets/youtube.svg": "2733eef154337653240b9efafb8d9eec74402c77f4d84018b3af44ec251c4d88"
+  }
+}

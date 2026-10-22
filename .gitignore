@@ -1,0 +1,15 @@
+node_modules/
+dist/
+release/
+*.log
+*.tmp
+.env
+.env.*
+*.pfx
+*.p12
+*.pem
+*.key
+*.bak
+*.corrupt-*
+.DS_Store
+Thumbs.db

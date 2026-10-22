@@ -1,0 +1,132 @@
+{
+  "name": "gravity-directo",
+  "version": "1.1.2-beta.1",
+  "private": true,
+  "description": "Gravity Shields reforzados: motor de reglas de red/cosméticos ampliado, YouTube, privacidad local; diseño intacto",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "check": "node scripts/check.cjs",
+    "test": "npm run check && npm run test:visual && npm run test:profile && npm run test:bookmarks && npm run test:popup && npm run test:security && npm run test:hardening && npm run test:diagnostics && npm run test:recovery && npm run test:native-config && npm run test:audio-state && npm run test:download-safety && npm run test:session-io && npm run test:release-policy && npm run test:pro-features && npm run test:smoke && npm run test:updater && npm run test:evidence && npm run test:privacy && npm run test:protection && npm run test:shields && npm run test:smart-search && npm run test:site-risk && npm run test:defender && npm run test:youtube-continuity && npm run test:fullscreen && npm run test:filter-refresh && npm run test:adblock-advanced && npm run test:youtube-ad-handler",
+    "test:smoke": "node scripts/test-smoke.cjs",
+    "test:profile": "node scripts/test-profile.cjs",
+    "test:bookmarks": "node scripts/test-bookmarks.cjs",
+    "test:visual": "node scripts/test-visual.cjs",
+    "pack:win:beta": "npm run test && electron-builder --win nsis --x64 --publish never",
+    "release:guard": "node scripts/release-guard.cjs",
+    "release:win": "node scripts/build-release.cjs",
+    "test:popup": "node scripts/test-popup.cjs",
+    "verify:signature": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-installer-signature.ps1",
+    "verify:integrity": "node scripts/verify-integrity.cjs",
+    "test:security": "node scripts/test-security.cjs",
+    "test:diagnostics": "node scripts/test-diagnostics.cjs",
+    "test:recovery": "node scripts/test-recovery.cjs",
+    "test:native-config": "node scripts/test-native-config.cjs",
+    "native:sites": "electron scripts/site-matrix.cjs --consent-network",
+    "test:audio-state": "node scripts/test-audio-state.cjs",
+    "test:download-safety": "node scripts/test-download-safety.cjs",
+    "test:release-policy": "node scripts/test-release-policy.cjs",
+    "native:ui": "electron scripts/native-ui-smoke.cjs",
+    "test:session-io": "node scripts/test-session-io.cjs",
+    "test:pro-features": "node scripts/test-pro-features.cjs",
+    "test:hardening": "node scripts/test-hardening.cjs",
+    "native:regression": "electron scripts/native-regression.cjs",
+    "native:media": "electron scripts/media-check.cjs --consent-media",
+    "native:regression:30": "electron scripts/native-regression.cjs --stress-30",
+    "native:crash-probe": "electron scripts/native-regression.cjs --crash-probe",
+    "test:updater": "node scripts/test-updater.cjs",
+    "test:evidence": "node scripts/test-release-evidence.cjs",
+    "test:privacy": "node scripts/test-data-integrity.cjs",
+    "test:protection": "node scripts/test-protection.cjs",
+    "release:evidence": "node scripts/evaluate-release-evidence.cjs",
+    "release:preflight": "npm run test && node scripts/preflight.cjs",
+    "test:shields": "node scripts/test-shields.cjs",
+    "test:smart-search": "node scripts/test-smart-search.cjs",
+    "test:site-risk": "node scripts/test-site-risk.cjs",
+    "test:defender": "node scripts/test-defender.cjs",
+    "test:youtube-continuity": "node scripts/test-youtube-continuity.cjs",
+    "test:fullscreen": "node scripts/test-fullscreen.cjs",
+    "test:filter-refresh": "node scripts/test-filter-refresh.cjs",
+    "test:adblock-advanced": "node scripts/test-adblock-advanced.cjs",
+    "test:youtube-ad-handler": "node scripts/test-youtube-ad-handler.cjs",
+    "native:adblock": "electron scripts/native-adblock-smoke.cjs"
+  },
+  "devDependencies": {
+    "electron": "44.9.3",
+    "electron-builder": "26.16.1"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "UNLICENSED",
+  "build": {
+    "appId": "app.gravity.navegador",
+    "productName": "Gravity",
+    "asar": true,
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "app/**/*",
+      "main.cjs",
+      "preload.cjs",
+      "profile-store.cjs",
+      "bookmarks-io.cjs",
+      "popup-policy.cjs",
+      "package.json",
+      "!**/*.map",
+      "!**/*.md",
+      "security-policy.cjs",
+      "diagnostics.cjs",
+      "crash-recovery.cjs",
+      "audio-state.cjs",
+      "download-safety.cjs",
+      "session-io.cjs",
+      "pro-tab-state.cjs",
+      "profiles.cjs",
+      "credential-vault.cjs",
+      "page-tools.cjs",
+      "crop-preload.cjs",
+      "tab-efficiency.cjs",
+      "permission-hardening.cjs",
+      "update-service.cjs",
+      "release-channel.cjs",
+      "release-channel.json",
+      "privacy-shields.cjs",
+      "smart-search.cjs",
+      "defender-scan.cjs",
+      "site-risk.cjs",
+      "ad-cosmetics.cjs",
+      "fullscreen-policy.cjs",
+      "youtube-continuity.cjs",
+      "filter-refresh.cjs",
+      "abp-extended.cjs",
+      "youtube-ad-handler.cjs"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/gravity.ico",
+      "artifactName": "Gravity-Setup-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "deleteAppDataOnUninstall": false
+    },
+    "publish": []
+  },
+  "dependencies": {
+    "electron-updater": "6.8.10"
+  }
+}

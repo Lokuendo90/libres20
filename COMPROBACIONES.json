@@ -1,0 +1,15 @@
+{
+  "version": "1.1.2-beta.1",
+  "state": "Beta privada: no aprobada para lanzamiento público",
+  "base": "Gravity 1.1.1: conservadas todas las funciones anteriores",
+  "syntactic_and_regression_tests": "passed: npm test",
+  "advanced_network_filters": "tested synthetically: domain, URL patterns, exceptions, request types",
+  "cosmetic_filtering": "tested with Chromium: example ad hidden, ordinary player and content visible",
+  "youtube_in_player_ad_control": "simulated only; no real YouTube/Windows validation",
+  "visual_baseline": "16 protected resources match VISUAL-BASELINE.json",
+  "native_electron_on_windows": "PENDING: run COMPROBAR-BLOQUEO-WINDOWS.bat",
+  "live_zero_ads": "NOT GUARANTEED: some first-party or embedded advertisements may remain",
+  "vpn_and_malware_protection": "unchanged from previous; no guaranteed anonymous IP or malware immunity",
+  "new_third_party_runtime_dependencies": 0,
+  "publishing_status": "unsigned; updater not activated"
+}
